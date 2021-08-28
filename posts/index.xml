@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on serd4r&#39;s diary</title>
+    <link>https://serd4r.github.io/posts/</link>
+    <description>Recent content in Posts on serd4r&#39;s diary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>serd4r</copyright>
+    <lastBuildDate>Sat, 28 Aug 2021 16:31:28 +0300</lastBuildDate><atom:link href="https://serd4r.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manjaro Linux Screen Tearing Cözümü</title>
+      <link>https://serd4r.github.io/posts/manjaro-screen-tearing-cozumu/</link>
+      <pubDate>Sat, 28 Aug 2021 16:31:28 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/manjaro-screen-tearing-cozumu/</guid>
+      <description>Manjaro Linux üzerinde Game Of Thrones izlerken ekranda garip bir şekilde yırtılma olduğunu farkettim.Makinemde Intel dahili ekran kartı var.
+inxi -G komutu ile ekran kartını görelim. 1  [serd4r@D3LL ~]$ inxi -G   Ekran kartı bilgileri : 1 2 3 4 5 6 7 8 9 10  Graphics: Device-1: Intel 2nd Generation Core Processor Family Integrated Graphics driver: i915 v: kernel Device-2: AMD Seymour [Radeon HD 6400M/7400M Series] driver: radeon v: kernel Device-3: Realtek Integrated Webcam type: USB driver: uvcvideo Display: x11 server: X.</description>
+    </item>
+    
+    <item>
+      <title>Phishing via Sql Injection</title>
+      <link>https://serd4r.github.io/posts/phishing-via-sql-injection/</link>
+      <pubDate>Fri, 30 Jul 2021 00:07:29 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/phishing-via-sql-injection/</guid>
+      <description>Merhaba bu yazıda alışılmış SQLi saldırılarının (Login bilgilerini alıp siteyi uçurmak gibi&amp;hellip; ) aksine, SQLi barındıran sitenin URL adresini kendi lehimize göre nasıl manipule ederiz bu konu hakkında yazıcam.
+Hedef sistemde SQL Injection bulup fantezi yapıcaz&amp;hellip;Örneğin; facebookmarket.com gibi güzel, kaymak gibi bi&#39; domain buldunuz tabi sitede SQLi açığı mevcut olmalı! Bu siteye hacklersem 1 taşla 1 kuş vurmuş olurum, ama az sonra anlatacaklarımı bu sitede uygularsam çalamayacağım facebook account&amp;rsquo;u kalmaz.Başlayalım;</description>
+    </item>
+    
+    <item>
+      <title>Basit Linux Komutlari</title>
+      <link>https://serd4r.github.io/posts/basit-linux-komutlari/</link>
+      <pubDate>Sat, 17 Jul 2021 19:25:37 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/basit-linux-komutlari/</guid>
+      <description>Önceki Dizine Geri Dön Uzun bir dizin yoluna girdiniz ve oradan da farklı bir dizine derken birden önceki dizin yoluna gitmeniz gerektiğini farkettiniz.Bu komutu girin ve önceki dizine atlayın.
+1  $ cd -   Bu sizi önceki dizine geri atacaktır böylelikle artık uzun dizin yolunu yazmak ya da kopyala yapıştır gibi yapmanıza gerek yok. Ana Dizine Geri Dön Oldukça açık&amp;hellip;Linux ana dizinden uzakta bir yerdesiniz ve ana dizine gitmeniz gerekiyor.</description>
+    </item>
+    
+    <item>
+      <title>Bisikletimi Nasıl Yükselttim : Triban100</title>
+      <link>https://serd4r.github.io/posts/bisikletimi-nasil-yukselttim-triban100/</link>
+      <pubDate>Thu, 15 Jul 2021 23:24:15 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/bisikletimi-nasil-yukselttim-triban100/</guid>
+      <description>27/03/2018 tarihinde, decathlon üzerinden yol bisikletleri hatta bisiklet hakkında hiçbir teknik bilgim olmadan en alt model trian100&amp;rsquo;ü aldım.O zamanki fiyatı 1.199.99₺ imiş 😃 tabi gel zaman git zaman şu anda fiyatı 3.000₺ ye kadar fırlamış💲💲💲
+Bir ürün alırken maalesef hemen herkes aynı yanılgıya düşüyor teknik bilgiden uzak olduğumuzu kabul edip araştırmıyoruz da sanki her şeyden haberdarmışız gibi en ucuzuna atlıyoruz.Tabi bazı şeyler tecrübe edilerek öğreniliyor orası ayrı mevzu.
+Her neyse oturduğum yer şehir merkezinden yaklaşık 2km mesafede ve yol üzerinde 700m&amp;rsquo;lik arabaları dahi zorlayan dik bir yokuş var.</description>
+    </item>
+    
+    <item>
+      <title>Joker : İzlemeyen Yanar!</title>
+      <link>https://serd4r.github.io/posts/joker-izlemeyen-yanar/</link>
+      <pubDate>Fri, 09 Jul 2021 22:05:55 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/joker-izlemeyen-yanar/</guid>
+      <description>Bir insan toplum tarafından nasıl delirir, ötekileştirilir, nasıl suça itilir hepsinin yanıtı bu filmde.
+Başrolde &amp;ldquo;Joaquin Phoenix&amp;rdquo; ile tam bir başyapıt, harika&amp;hellip;Öncelikle Joker &amp;lsquo;i görünce vurdulu kırdılı, patlamalı, uçmalı şeyler bekliyordum ama tam tersi.Tam bir psikolojik dram filmi.Palyaçoluk yaparak geçimini güçlükle sağlayan ve bakıma muhtaç annesiyle kalan adamımız Joker, filmde ilk etapta tamamen sağlıklı bir kafaya sahip diyemem; zira biraz contaları yanık; birçok anti-depresan ve psikiyatrik ilaç kullanıyor.Ve çevresindekiler&amp;hellip;İş arkadaşından, patronundan tutun da yolda yürürken karşılaştığı insanlar bile bir zamandan sonra ayağına dolanmaya, hayatını tepe taklak etmeye başlıyorlar.</description>
+    </item>
+    
+    <item>
+      <title>Karantina</title>
+      <link>https://serd4r.github.io/posts/karantina/</link>
+      <pubDate>Sat, 01 May 2021 12:40:01 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/karantina/</guid>
+      <description>10 günlük karantina sürecimi bu odada geçiriyorum.Şu anlık pek bişey yapamıyorum arada kendimi uzun uzun tavana bakarken buluyorum.PPSSPP&amp;rsquo;de 15 senelik playstation oyunlarını oynuyorum..DGS çalışıp çalışmamak konusunda saç baş yoluyorum.Böyle yani henüz delirmedim bakalım hayırlısı.</description>
+    </item>
+    
+    <item>
+      <title>Çıkış Bileti</title>
+      <link>https://serd4r.github.io/posts/cikis-bileti/</link>
+      <pubDate>Sun, 28 Mar 2021 14:08:15 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/cikis-bileti/</guid>
+      <description>Kasvetli kış ortasında
+Soğuk rüzgar inledi;
+Toprak demir kadar sert durdu,
+Su bir taş gibi;
+Kar yağmıştı, karda kar,
+Kar üstünde kar,
+Kışın kasvetli ortasında
+Uzun zaman önce.  </description>
+    </item>
+    
+    <item>
+      <title>Statik Sitemizi Github&#39;da Yayınlıyoruz</title>
+      <link>https://serd4r.github.io/posts/statik-sitemizi-github-da-yayinliyoruz/</link>
+      <pubDate>Mon, 25 Jan 2021 09:52:17 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/statik-sitemizi-github-da-yayinliyoruz/</guid>
+      <description>Hugo ile statik site oluşturmuştuk. Şimdi sitemizi github üzerinde nasıl host ederiz onu açıklayacağım.
+config.toml Github statik site kaynak kodlarını tanımıyor o yüzden dosyalarımızı derlememiz gerekiyor.config.toml dosyasını açın ve içersine :
+1  publishDir = &amp;#34;public&amp;#34;   bu kodu ekleyin.Sitemizi derleyeceğimiz klasör /public/ olacak.
+Derliyoruz Terminali açın ve blog klasörünüze girin :
+1 2  [serd4r@D3LL]$ cd blog [serd4r@D3LL blog]$ hugo   Blog klasörünüzün içerisinde derlediğiniz /public/ klasörü oluşmuş olmalı.</description>
+    </item>
+    
+    <item>
+      <title>Tor Browser Kurulumu</title>
+      <link>https://serd4r.github.io/posts/tor-browser-kurulumu/</link>
+      <pubDate>Sat, 23 Jan 2021 10:08:53 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/tor-browser-kurulumu/</guid>
+      <description>Kısıtlamalar : Kullandığınız linux distrosunun paket yöneticisinden ya da torproject.org üzerinden TOR Browser&amp;rsquo;ı indirmeyi deniyorsanız ve ağınızda herhangi bir VPN yapılandırmanız yok ise muhtemelen indiremeyeceksiniz.Çünkü TOR ülkemizde yasaklı konumda.İnternetten bulacağınız dandik bir web proxy ile TOR kurulumunu indirebilir ve bridge yapılandırmasıyla kullanmaya başlayabilirsiniz.
+Kullandığım Web Proxy : croxyproxy.com torproject.org adresine gidin ve anasayfadaki &amp;ldquo;Download Tor Browser&amp;rdquo; &amp;lsquo;a tıklayın ve platformunuza uygun kurulumu indirmeye başlayın.Download biraz yavaş olacaktır sabırlı olun.İster linux, ister windows olsun kurulum gayet basit.</description>
+    </item>
+    
+    <item>
+      <title>GoHugo ile Statik Site Yaratma</title>
+      <link>https://serd4r.github.io/posts/gohugo-ile-statik-site-yaratma/</link>
+      <pubDate>Tue, 19 Jan 2021 22:03:03 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/gohugo-ile-statik-site-yaratma/</guid>
+      <description>Öncelikle GitHub üzerinde statik bir site oluşturmakla ilgili türkçe kaynakların oldukça kıt ve yetersiz olduğu konusunda sizi uyarıyorum.Bunlarla vaktinizi harcamayın ve yabancı kaynaklardan yararlanın.Birkaç tr sitede adamlar sırf dönem ödevi yazar gibi mecburiyetten karalamışlar sanki.
+Ben GoHugo statik site oluşturucusunu kullandım ve manjaro üzerinde kurulu olarak geliyor :)
+Kurulum [+] Linux : 1  $ snap install hugo   [+] Mac OS : 1  $ brew install hugo   [+] Windows : 1  $ choco install hugo -confirm   Kurulum başarılıysa versiyon basacaktır.</description>
+    </item>
+    
+    <item>
+      <title>İlk Post &amp; Site Hakkında</title>
+      <link>https://serd4r.github.io/posts/ilk-post-ve-site-hakkinda/</link>
+      <pubDate>Sun, 17 Jan 2021 23:27:58 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/ilk-post-ve-site-hakkinda/</guid>
+      <description>Bu siteyi birkaç saat içerisinde GoHugo,GithubPages ve Manjaro üçlüsünün katkılarıyla yayına aldım.Github harika iş yapmış adamlar bedavaya harika bir barındırma hizmeti veriyor.Yazıları markdown kullanarak notepad üzerinden yazıyorsunuz, veritabanı yok dolayısıyla oldukça güvenli ve jet hızında karşılık veriyor.</description>
+    </item>
+    
+  </channel>
+</rss>

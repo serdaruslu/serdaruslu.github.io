@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on serd4r&#39;s diary</title>
+    <link>https://serd4r.github.io/tags/github/</link>
+    <description>Recent content in github on serd4r&#39;s diary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>serd4r</copyright>
+    <lastBuildDate>Mon, 25 Jan 2021 09:52:17 +0300</lastBuildDate><atom:link href="https://serd4r.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Statik Sitemizi Github&#39;da Yayınlıyoruz</title>
+      <link>https://serd4r.github.io/posts/statik-sitemizi-github-da-yayinliyoruz/</link>
+      <pubDate>Mon, 25 Jan 2021 09:52:17 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/statik-sitemizi-github-da-yayinliyoruz/</guid>
+      <description>Hugo ile statik site oluşturmuştuk. Şimdi sitemizi github üzerinde nasıl host ederiz onu açıklayacağım.
+config.toml Github statik site kaynak kodlarını tanımıyor o yüzden dosyalarımızı derlememiz gerekiyor.config.toml dosyasını açın ve içersine :
+1  publishDir = &amp;#34;public&amp;#34;   bu kodu ekleyin.Sitemizi derleyeceğimiz klasör /public/ olacak.
+Derliyoruz Terminali açın ve blog klasörünüze girin :
+1 2  [serd4r@D3LL]$ cd blog [serd4r@D3LL blog]$ hugo   Blog klasörünüzün içerisinde derlediğiniz /public/ klasörü oluşmuş olmalı.</description>
+    </item>
+    
+    <item>
+      <title>GoHugo ile Statik Site Yaratma</title>
+      <link>https://serd4r.github.io/posts/gohugo-ile-statik-site-yaratma/</link>
+      <pubDate>Tue, 19 Jan 2021 22:03:03 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/gohugo-ile-statik-site-yaratma/</guid>
+      <description>Öncelikle GitHub üzerinde statik bir site oluşturmakla ilgili türkçe kaynakların oldukça kıt ve yetersiz olduğu konusunda sizi uyarıyorum.Bunlarla vaktinizi harcamayın ve yabancı kaynaklardan yararlanın.Birkaç tr sitede adamlar sırf dönem ödevi yazar gibi mecburiyetten karalamışlar sanki.
+Ben GoHugo statik site oluşturucusunu kullandım ve manjaro üzerinde kurulu olarak geliyor :)
+Kurulum [+] Linux : 1  $ snap install hugo   [+] Mac OS : 1  $ brew install hugo   [+] Windows : 1  $ choco install hugo -confirm   Kurulum başarılıysa versiyon basacaktır.</description>
+    </item>
+    
+  </channel>
+</rss>

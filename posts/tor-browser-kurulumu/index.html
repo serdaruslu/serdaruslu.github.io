@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Tor Browser Kurulumu | serd4r&#39;s diary</title>
+  <meta name="description" content="Good things take time, time takes everything.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="google-site-verification" content="sohjmhoa72bFsGqIOKFWEVd9a7ABlxPQ44qh9oTbj0U" />
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Tor Browser Kurulumu" />
+<meta property="og:description" content="Kısıtlamalar : Kullandığınız linux distrosunun paket yöneticisinden ya da torproject.org üzerinden TOR Browser&rsquo;ı indirmeyi deniyorsanız ve ağınızda herhangi bir VPN yapılandırmanız yok ise muhtemelen indiremeyeceksiniz.Çünkü TOR ülkemizde yasaklı konumda.İnternetten bulacağınız dandik bir web proxy ile TOR kurulumunu indirebilir ve bridge yapılandırmasıyla kullanmaya başlayabilirsiniz.
+Kullandığım Web Proxy : croxyproxy.com torproject.org adresine gidin ve anasayfadaki &ldquo;Download Tor Browser&rdquo; &lsquo;a tıklayın ve platformunuza uygun kurulumu indirmeye başlayın.Download biraz yavaş olacaktır sabırlı olun.İster linux, ister windows olsun kurulum gayet basit." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://serd4r.github.io/posts/tor-browser-kurulumu/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-23T10:08:53+03:00" />
+<meta property="article:modified_time" content="2021-01-23T10:08:53+03:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tor Browser Kurulumu"/>
+<meta name="twitter:description" content="Kısıtlamalar : Kullandığınız linux distrosunun paket yöneticisinden ya da torproject.org üzerinden TOR Browser&rsquo;ı indirmeyi deniyorsanız ve ağınızda herhangi bir VPN yapılandırmanız yok ise muhtemelen indiremeyeceksiniz.Çünkü TOR ülkemizde yasaklı konumda.İnternetten bulacağınız dandik bir web proxy ile TOR kurulumunu indirebilir ve bridge yapılandırmasıyla kullanmaya başlayabilirsiniz.
+Kullandığım Web Proxy : croxyproxy.com torproject.org adresine gidin ve anasayfadaki &ldquo;Download Tor Browser&rdquo; &lsquo;a tıklayın ve platformunuza uygun kurulumu indirmeye başlayın.Download biraz yavaş olacaktır sabırlı olun.İster linux, ister windows olsun kurulum gayet basit."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://serd4r.github.io/css/style-classic.css">
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://serd4r.github.io/images/favicon.ico" />
+
+  
+  
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">[anasayfa]</a></li>
+         
+        <li><a href="/posts">[arşiv]</a></li>
+         
+        <li><a href="/categories">[kategori]</a></li>
+         
+        <li><a href="/tags">[etiket]</a></li>
+         
+        <li><a href="/about">[hakkımda]</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://serd4r.github.io/posts/gohugo-ile-statik-site-yaratma/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://serd4r.github.io/posts/statik-sitemizi-github-da-yayinliyoruz/">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Önceki</span>
+      <span id="i-next" class="info" style="display:none;">Sonraki</span>
+      <span id="i-top" class="info" style="display:none;">En Üste</span>
+      <span id="i-share" class="info" style="display:none;">Paylaş</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&text=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&is_video=false&description=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Tor%20Browser%20Kurulumu&body=Check out this article: https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&name=Tor%20Browser%20Kurulumu&description=K%c4%b1s%c4%b1tlamalar%20%3a%20Kulland%c4%b1%c4%9f%c4%b1n%c4%b1z%20linux%20distrosunun%20paket%20y%c3%b6neticisinden%20ya%20da%20torproject.org%20%c3%bczerinden%20TOR%20Browser%26rsquo%3b%c4%b1%20indirmeyi%20deniyorsan%c4%b1z%20ve%20a%c4%9f%c4%b1n%c4%b1zda%20herhangi%20bir%20VPN%20yap%c4%b1land%c4%b1rman%c4%b1z%20yok%20ise%20muhtemelen%20indiremeyeceksiniz.%c3%87%c3%bcnk%c3%bc%20TOR%20%c3%bclkemizde%20yasakl%c4%b1%20konumda.%c4%b0nternetten%20bulaca%c4%9f%c4%b1n%c4%b1z%20dandik%20bir%20web%20proxy%20ile%20TOR%20kurulumunu%20indirebilir%20ve%20bridge%20yap%c4%b1land%c4%b1rmas%c4%b1yla%20kullanmaya%20ba%c5%9flayabilirsiniz.%0aKulland%c4%b1%c4%9f%c4%b1m%20Web%20Proxy%20%3a%20croxyproxy.com%20torproject.org%20adresine%20gidin%20ve%20anasayfadaki%20%26ldquo%3bDownload%20Tor%20Browser%26rdquo%3b%20%26lsquo%3ba%20t%c4%b1klay%c4%b1n%20ve%20platformunuza%20uygun%20kurulumu%20indirmeye%20ba%c5%9flay%c4%b1n.Download%20biraz%20yava%c5%9f%20olacakt%c4%b1r%20sab%c4%b1rl%c4%b1%20olun.%c4%b0ster%20linux%2c%20ister%20windows%20olsun%20kurulum%20gayet%20basit.">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&t=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#kısıtlamalar-">Kısıtlamalar :</a></li>
+    <li><a href="#kullandığım-web-proxy--croxyproxycomhttpswwwcroxyproxycom_tr">Kullandığım Web Proxy : <a href="https://www.croxyproxy.com/_tr/">croxyproxy.com</a></a></li>
+    <li><a href="#kurulum-">Kurulum :</a></li>
+    <li><a href="#yapılandırma-">Yapılandırma :</a></li>
+    <li><a href="#ayarlar-">Ayarlar :</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Tor Browser Kurulumu
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-01-23 10:08:53 &#43;0300 &#43;03" itemprop="datePublished">23/01/2021</time>
+          
+        </div>
+        
+        <div class="article-category">
+            <i class="fas fa-archive"></i>
+            
+            
+            <a class="category-link" href="/categories/gizlilik-ve-g%C3%BCvenlik">Gizlilik ve Güvenlik</a>
+            
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/gizlilik" rel="tag">gizlilik</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/g%C3%BCvenlik" rel="tag">güvenlik</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/privacy" rel="tag">privacy</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/internet" rel="tag">internet</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/security" rel="tag">security</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/tor-browser" rel="tag">tor browser</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/anonymity" rel="tag">anonymity</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <figure><img src="https://1.bp.blogspot.com/-BhKKDoMvSPQ/YA0T6nLBy4I/AAAAAAAAAr8/yy9HGeD863QO3tH26jegI7Yv11rnjUa3gCLcBGAsYHQ/s0/tor.png" width="700"/>
+</figure>
+
+<h2 id="kısıtlamalar-">Kısıtlamalar :</h2>
+<p>Kullandığınız linux distrosunun paket yöneticisinden ya da torproject.org üzerinden TOR Browser&rsquo;ı indirmeyi deniyorsanız ve ağınızda herhangi bir VPN yapılandırmanız yok ise muhtemelen indiremeyeceksiniz.Çünkü TOR ülkemizde yasaklı konumda.İnternetten bulacağınız dandik bir web proxy ile TOR kurulumunu indirebilir ve bridge yapılandırmasıyla kullanmaya başlayabilirsiniz.</p>
+<h2 id="kullandığım-web-proxy--croxyproxycomhttpswwwcroxyproxycom_tr">Kullandığım Web Proxy : <a href="https://www.croxyproxy.com/_tr/">croxyproxy.com</a></h2>
+<p>torproject.org adresine gidin ve anasayfadaki &ldquo;Download Tor Browser&rdquo; &lsquo;a tıklayın ve platformunuza uygun kurulumu indirmeye başlayın.Download biraz yavaş olacaktır sabırlı olun.İster linux, ister windows olsun kurulum gayet basit.Tor kullanmak için illaki siyah kapşon takıp, geceleri ekranda yeşil yazılar kaydıran tiplerden olmanıza gerek yok.</p>
+<h2 id="kurulum-">Kurulum :</h2>
+<p><img src="https://1.bp.blogspot.com/-xTyoszpY5p4/YA0U2vHd2TI/AAAAAAAAAsI/0SztXfD46CM2XXtCQmuL8v7RF1Cx2gDGACLcBGAsYHQ/s663/1.png" alt="Kurulum"></p>
+<p>start-tor-browser.desktop &lsquo;a tıklayıp yapılandırmaya geçin.</p>
+<p><img src="https://1.bp.blogspot.com/-RJMrLuXqeQU/YA0U2mKZTZI/AAAAAAAAAsQ/_eh44C3zQ14Lf8jQRNXS18AdJ3Co_n6AACLcBGAsYHQ/s624/2.png" alt="Yapılandırma"></p>
+<h2 id="yapılandırma-">Yapılandırma :</h2>
+<p>Yapılandır diyerek devam ediyoruz.</p>
+<p><img src="https://1.bp.blogspot.com/-_VzSCdQt3xw/YA0U2hAHFOI/AAAAAAAAAsM/FLK6y6XjI5Alpmw5ylftB7x9gW312OLGQCLcBGAsYHQ/s624/3.png" alt=""></p>
+<p>TorProject üzerinden köprü isteğinde bulunuyoruz.Köprü kullanıma açık olarak dünyanın birçok yerindeki gönüllüler tarafından sağlanan bizim tor ağına çıkışımızı sağlayan aktarıcılardır.Bu şifreli dinamik ağlar tek tek bulunup engellenemez.</p>
+<p><img src="https://1.bp.blogspot.com/-mgDbr1AYlrc/YA0U3FfLb7I/AAAAAAAAAsU/R2eElJ-kZNUA-u3PwYJ50KKeNd4l0bTMQCLcBGAsYHQ/s624/4.png" alt=""></p>
+<p>Captcha&rsquo;yı geçiyoruz&hellip;</p>
+<p><img src="https://1.bp.blogspot.com/-n5VtdcfmFjc/YA0U3D6UiQI/AAAAAAAAAsY/3a-S6Pf2byspc89SfBWRDJtek-btX75iACLcBGAsYHQ/s624/5.png" alt=""></p>
+<p>TOR bize 3 adet köprü atadı bunlar değiştirilebiliyor.</p>
+<p><img src="https://1.bp.blogspot.com/-3USLWnvZLgs/YA0U3X4UmSI/AAAAAAAAAsc/zE7UYn7aZH0gPPkjc3xStqRIY9Y6YbKQwCLcBGAsYHQ/s624/6.png" alt=""></p>
+<p>Bağlan diyerek yapılandırmayı sonlandırıyoruz.Artık TOR kullanıma hazır.</p>
+<p><img src="https://1.bp.blogspot.com/-_9M0SIxSz00/YA0U3pOKueI/AAAAAAAAAsg/j0Mbbzw03MwkClbHyClwfuSb2m8I6axKACLcBGAsYHQ/s894/7.png" alt=""></p>
+<h2 id="ayarlar-">Ayarlar :</h2>
+<p><img src="https://1.bp.blogspot.com/-4rAVO7BLM7I/YA0U39n3g-I/AAAAAAAAAsk/1ZF8LG22sz4mGgWbhfIMehddrmtJJ0YaACLcBGAsYHQ/s894/8.png" alt=""></p>
+<p>Ben güvenlik düzeyini standart olarak kullanıyorum, En Güvenli&rsquo;de maalesef görsel ve betiklerde bozulma yaşanıyor.Tavsiyem gizlilik ve güvenlik ayarlarından kamera, mikrofon, konum yani allah ne verdiyse engellemeniz ve kesinlikle gereksiz abuk sabuk eklentiler kurmamanız.</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+  
+    <div class="blog-post-comments">
+<div id="disqus_thread"></div>
+<script>
+    
+
+    
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://serd4r.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+  
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">[anasayfa]</a></li>
+         
+          <li><a href="/posts">[arşiv]</a></li>
+         
+          <li><a href="/categories">[kategori]</a></li>
+         
+          <li><a href="/tags">[etiket]</a></li>
+         
+          <li><a href="/about">[hakkımda]</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#kısıtlamalar-">Kısıtlamalar :</a></li>
+    <li><a href="#kullandığım-web-proxy--croxyproxycomhttpswwwcroxyproxycom_tr">Kullandığım Web Proxy : <a href="https://www.croxyproxy.com/_tr/">croxyproxy.com</a></a></li>
+    <li><a href="#kurulum-">Kurulum :</a></li>
+    <li><a href="#yapılandırma-">Yapılandırma :</a></li>
+    <li><a href="#ayarlar-">Ayarlar :</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&text=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&is_video=false&description=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Tor%20Browser%20Kurulumu&body=Check out this article: https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&title=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&name=Tor%20Browser%20Kurulumu&description=K%c4%b1s%c4%b1tlamalar%20%3a%20Kulland%c4%b1%c4%9f%c4%b1n%c4%b1z%20linux%20distrosunun%20paket%20y%c3%b6neticisinden%20ya%20da%20torproject.org%20%c3%bczerinden%20TOR%20Browser%26rsquo%3b%c4%b1%20indirmeyi%20deniyorsan%c4%b1z%20ve%20a%c4%9f%c4%b1n%c4%b1zda%20herhangi%20bir%20VPN%20yap%c4%b1land%c4%b1rman%c4%b1z%20yok%20ise%20muhtemelen%20indiremeyeceksiniz.%c3%87%c3%bcnk%c3%bc%20TOR%20%c3%bclkemizde%20yasakl%c4%b1%20konumda.%c4%b0nternetten%20bulaca%c4%9f%c4%b1n%c4%b1z%20dandik%20bir%20web%20proxy%20ile%20TOR%20kurulumunu%20indirebilir%20ve%20bridge%20yap%c4%b1land%c4%b1rmas%c4%b1yla%20kullanmaya%20ba%c5%9flayabilirsiniz.%0aKulland%c4%b1%c4%9f%c4%b1m%20Web%20Proxy%20%3a%20croxyproxy.com%20torproject.org%20adresine%20gidin%20ve%20anasayfadaki%20%26ldquo%3bDownload%20Tor%20Browser%26rdquo%3b%20%26lsquo%3ba%20t%c4%b1klay%c4%b1n%20ve%20platformunuza%20uygun%20kurulumu%20indirmeye%20ba%c5%9flay%c4%b1n.Download%20biraz%20yava%c5%9f%20olacakt%c4%b1r%20sab%c4%b1rl%c4%b1%20olun.%c4%b0ster%20linux%2c%20ister%20windows%20olsun%20kurulum%20gayet%20basit.">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fserd4r.github.io%2fposts%2ftor-browser-kurulumu%2f&t=Tor%20Browser%20Kurulumu">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    copyright ❤️ 2021  serd4r 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">[anasayfa]</a></li>
+         
+        <li><a href="/posts">[arşiv]</a></li>
+         
+        <li><a href="/categories">[kategori]</a></li>
+         
+        <li><a href="/tags">[etiket]</a></li>
+         
+        <li><a href="/about">[hakkımda]</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</html>

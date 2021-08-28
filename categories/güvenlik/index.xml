@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Güvenlik on serd4r&#39;s diary</title>
+    <link>https://serd4r.github.io/categories/g%C3%BCvenlik/</link>
+    <description>Recent content in Güvenlik on serd4r&#39;s diary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <copyright>serd4r</copyright>
+    <lastBuildDate>Fri, 30 Jul 2021 00:07:29 +0300</lastBuildDate><atom:link href="https://serd4r.github.io/categories/g%C3%BCvenlik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Phishing via Sql Injection</title>
+      <link>https://serd4r.github.io/posts/phishing-via-sql-injection/</link>
+      <pubDate>Fri, 30 Jul 2021 00:07:29 +0300</pubDate>
+      
+      <guid>https://serd4r.github.io/posts/phishing-via-sql-injection/</guid>
+      <description>Merhaba bu yazıda alışılmış SQLi saldırılarının (Login bilgilerini alıp siteyi uçurmak gibi&amp;hellip; ) aksine, SQLi barındıran sitenin URL adresini kendi lehimize göre nasıl manipule ederiz bu konu hakkında yazıcam.
+Hedef sistemde SQL Injection bulup fantezi yapıcaz&amp;hellip;Örneğin; facebookmarket.com gibi güzel, kaymak gibi bi&#39; domain buldunuz tabi sitede SQLi açığı mevcut olmalı! Bu siteye hacklersem 1 taşla 1 kuş vurmuş olurum, ama az sonra anlatacaklarımı bu sitede uygularsam çalamayacağım facebook account&amp;rsquo;u kalmaz.Başlayalım;</description>
+    </item>
+    
+  </channel>
+</rss>
